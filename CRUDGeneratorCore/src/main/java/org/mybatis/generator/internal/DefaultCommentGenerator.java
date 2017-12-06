@@ -51,6 +51,7 @@ public class DefaultCommentGenerator implements CommentGenerator {
      * 111给Java文件加注释，原来为空
      */
     public void addJavaFileComment(CompilationUnit compilationUnit) {
+        /*
     	SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
     	compilationUnit.addFileCommentLine("/**");
     	compilationUnit.addFileCommentLine(" * ");
@@ -59,13 +60,14 @@ public class DefaultCommentGenerator implements CommentGenerator {
     	compilationUnit.addFileCommentLine(" * <p>");
     	compilationUnit.addFileCommentLine(" * Copyright: Copyright (c) " + sdf.format(new Date()));
     	compilationUnit.addFileCommentLine(" * <p>2016-3-21");
-    	compilationUnit.addFileCommentLine(" * Company: 北京新东方学校");
+    	compilationUnit.addFileCommentLine(" * Company: 玛瑙湾");
     	compilationUnit.addFileCommentLine(" * <p>");
     	compilationUnit.addFileCommentLine(" * Author: dulinan@xdf.cn");
     	compilationUnit.addFileCommentLine(" * <p>");
     	compilationUnit.addFileCommentLine(" * Version: 1.0");
     	compilationUnit.addFileCommentLine(" * <p>");
-    	compilationUnit.addFileCommentLine(" */");
+    	compilationUnit.addFileCommentLine("
+        */
     }
 
     /**

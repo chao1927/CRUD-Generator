@@ -51,7 +51,7 @@ public class BaseRecordGenerator extends AbstractJavaGenerator {
                 introspectedTable.getBaseRecordType());
         TopLevelClass topLevelClass = new TopLevelClass(type);
         topLevelClass.setVisibility(JavaVisibility.PUBLIC);
-        commentGenerator.addJavaFileComment(topLevelClass);
+        //commentGenerator.addJavaFileComment(topLevelClass);
 
         FullyQualifiedJavaType superClass = getSuperClass();
         if (superClass != null) {

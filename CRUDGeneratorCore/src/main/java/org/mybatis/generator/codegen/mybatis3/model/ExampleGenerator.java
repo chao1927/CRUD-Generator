@@ -47,13 +47,13 @@ public class ExampleGenerator extends AbstractJavaGenerator {
         FullyQualifiedTable table = introspectedTable.getFullyQualifiedTable();
         progressCallback.startTask(getString(
                 "Progress.6", table.toString())); //$NON-NLS-1$
-        CommentGenerator commentGenerator = context.getCommentGenerator();
+        //CommentGenerator commentGenerator = context.getCommentGenerator();
 
         FullyQualifiedJavaType type = new FullyQualifiedJavaType(
                 introspectedTable.getExampleType());
         TopLevelClass topLevelClass = new TopLevelClass(type);
         topLevelClass.setVisibility(JavaVisibility.PUBLIC);
-        commentGenerator.addJavaFileComment(topLevelClass);
+       //commentGenerator.addJavaFileComment(topLevelClass);
 
         // add default constructor
         Method method = new Method();
@@ -62,7 +62,7 @@ public class ExampleGenerator extends AbstractJavaGenerator {
         method.setName(type.getShortName());
         method.addBodyLine("oredCriteria = new ArrayList<Criteria>();"); //$NON-NLS-1$
 
-        commentGenerator.addGeneralMethodComment(method, introspectedTable);
+       // commentGenerator.addGeneralMethodComment(method, introspectedTable);
         topLevelClass.addMethod(method);
 
         // add field, getter, setter for orderby clause
@@ -70,7 +70,7 @@ public class ExampleGenerator extends AbstractJavaGenerator {
         field.setVisibility(JavaVisibility.PROTECTED);
         field.setType(FullyQualifiedJavaType.getStringInstance());
         field.setName("orderByClause"); //$NON-NLS-1$
-        commentGenerator.addFieldComment(field, introspectedTable);
+        //commentGenerator.addFieldComment(field, introspectedTable);
         topLevelClass.addField(field);
 
         method = new Method();
@@ -79,7 +79,7 @@ public class ExampleGenerator extends AbstractJavaGenerator {
         method.addParameter(new Parameter(FullyQualifiedJavaType
                 .getStringInstance(), "orderByClause")); //$NON-NLS-1$
         method.addBodyLine("this.orderByClause = orderByClause;"); //$NON-NLS-1$
-        commentGenerator.addGeneralMethodComment(method, introspectedTable);
+        //commentGenerator.addGeneralMethodComment(method, introspectedTable);
         topLevelClass.addMethod(method);
 
         method = new Method();
@@ -87,7 +87,7 @@ public class ExampleGenerator extends AbstractJavaGenerator {
         method.setReturnType(FullyQualifiedJavaType.getStringInstance());
         method.setName("getOrderByClause"); //$NON-NLS-1$
         method.addBodyLine("return orderByClause;"); //$NON-NLS-1$
-        commentGenerator.addGeneralMethodComment(method, introspectedTable);
+       // commentGenerator.addGeneralMethodComment(method, introspectedTable);
         topLevelClass.addMethod(method);
 
         // add field, getter, setter for distinct
@@ -95,7 +95,7 @@ public class ExampleGenerator extends AbstractJavaGenerator {
         field.setVisibility(JavaVisibility.PROTECTED);
         field.setType(FullyQualifiedJavaType.getBooleanPrimitiveInstance());
         field.setName("distinct"); //$NON-NLS-1$
-        commentGenerator.addFieldComment(field, introspectedTable);
+        //commentGenerator.addFieldComment(field, introspectedTable);
         topLevelClass.addField(field);
 
         method = new Method();
@@ -104,7 +104,7 @@ public class ExampleGenerator extends AbstractJavaGenerator {
         method.addParameter(new Parameter(FullyQualifiedJavaType
                 .getBooleanPrimitiveInstance(), "distinct")); //$NON-NLS-1$
         method.addBodyLine("this.distinct = distinct;"); //$NON-NLS-1$
-        commentGenerator.addGeneralMethodComment(method, introspectedTable);
+        //commentGenerator.addGeneralMethodComment(method, introspectedTable);
         topLevelClass.addMethod(method);
 
         method = new Method();
@@ -113,7 +113,7 @@ public class ExampleGenerator extends AbstractJavaGenerator {
                 .getBooleanPrimitiveInstance());
         method.setName("isDistinct"); //$NON-NLS-1$
         method.addBodyLine("return distinct;"); //$NON-NLS-1$
-        commentGenerator.addGeneralMethodComment(method, introspectedTable);
+       // commentGenerator.addGeneralMethodComment(method, introspectedTable);
         topLevelClass.addMethod(method);
 
         // add field and methods for the list of ored criteria
@@ -124,7 +124,7 @@ public class ExampleGenerator extends AbstractJavaGenerator {
                 "java.util.List<Criteria>"); //$NON-NLS-1$
         field.setType(fqjt);
         field.setName("oredCriteria"); //$NON-NLS-1$
-        commentGenerator.addFieldComment(field, introspectedTable);
+        //commentGenerator.addFieldComment(field, introspectedTable);
         topLevelClass.addField(field);
 
         method = new Method();
@@ -132,7 +132,7 @@ public class ExampleGenerator extends AbstractJavaGenerator {
         method.setReturnType(fqjt);
         method.setName("getOredCriteria"); //$NON-NLS-1$
         method.addBodyLine("return oredCriteria;"); //$NON-NLS-1$
-        commentGenerator.addGeneralMethodComment(method, introspectedTable);
+        //commentGenerator.addGeneralMethodComment(method, introspectedTable);
         topLevelClass.addMethod(method);
 
         method = new Method();
@@ -141,7 +141,7 @@ public class ExampleGenerator extends AbstractJavaGenerator {
         method.addParameter(new Parameter(FullyQualifiedJavaType
                 .getCriteriaInstance(), "criteria")); //$NON-NLS-1$
         method.addBodyLine("oredCriteria.add(criteria);"); //$NON-NLS-1$
-        commentGenerator.addGeneralMethodComment(method, introspectedTable);
+        //commentGenerator.addGeneralMethodComment(method, introspectedTable);
         topLevelClass.addMethod(method);
 
         method = new Method();
@@ -151,7 +151,7 @@ public class ExampleGenerator extends AbstractJavaGenerator {
         method.addBodyLine("Criteria criteria = createCriteriaInternal();"); //$NON-NLS-1$
         method.addBodyLine("oredCriteria.add(criteria);"); //$NON-NLS-1$
         method.addBodyLine("return criteria;"); //$NON-NLS-1$
-        commentGenerator.addGeneralMethodComment(method, introspectedTable);
+       // commentGenerator.addGeneralMethodComment(method, introspectedTable);
         topLevelClass.addMethod(method);
 
         method = new Method();
@@ -163,7 +163,7 @@ public class ExampleGenerator extends AbstractJavaGenerator {
         method.addBodyLine("oredCriteria.add(criteria);"); //$NON-NLS-1$
         method.addBodyLine("}"); //$NON-NLS-1$
         method.addBodyLine("return criteria;"); //$NON-NLS-1$
-        commentGenerator.addGeneralMethodComment(method, introspectedTable);
+       // commentGenerator.addGeneralMethodComment(method, introspectedTable);
         topLevelClass.addMethod(method);
 
         method = new Method();
@@ -172,7 +172,7 @@ public class ExampleGenerator extends AbstractJavaGenerator {
         method.setReturnType(FullyQualifiedJavaType.getCriteriaInstance());
         method.addBodyLine("Criteria criteria = new Criteria();"); //$NON-NLS-1$
         method.addBodyLine("return criteria;"); //$NON-NLS-1$
-        commentGenerator.addGeneralMethodComment(method, introspectedTable);
+        //commentGenerator.addGeneralMethodComment(method, introspectedTable);
         topLevelClass.addMethod(method);
 
         method = new Method();
@@ -181,7 +181,7 @@ public class ExampleGenerator extends AbstractJavaGenerator {
         method.addBodyLine("oredCriteria.clear();"); //$NON-NLS-1$
         method.addBodyLine("orderByClause = null;"); //$NON-NLS-1$
         method.addBodyLine("distinct = false;"); //$NON-NLS-1$
-        commentGenerator.addGeneralMethodComment(method, introspectedTable);
+       // commentGenerator.addGeneralMethodComment(method, introspectedTable);
         topLevelClass.addMethod(method);
 
         // now generate the inner class that holds the AND conditions
