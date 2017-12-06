@@ -46,6 +46,10 @@
         <table tableName="stud" domainObjectName="Stud"></table>
         -->
         <table tableName="t_order" domainObjectName="Order"
-               selectByExampleQueryId="false"></table>
+               selectByExampleQueryId="false"
+               enableSelectByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+        ></table>
     </context>
 </generatorConfiguration>  

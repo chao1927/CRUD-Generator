@@ -17,6 +17,7 @@ E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generat
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\logging\LogFactory.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\ibatis2\sqlmap\elements\UpdateByPrimaryKeyWithBLOBsElementGenerator.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\internal\PluginAggregator.java
+E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\mybatis3\service\elements\impl\FindMethodImplGenerator.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\internal\ExtendedDAOMethodNameCalculator.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\api\dom\java\PrimitiveTypeWrapper.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\config\PropertyRegistry.java
@@ -44,7 +45,9 @@ E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generat
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\config\JavaServiceGeneratorConfiguration.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\api\dom\java\TopLevelClass.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\mybatis3\model\PrimaryKeyGenerator.java
+E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\mybatis3\controller\elements\FindMethodGenerator.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\mybatis3\xmlmapper\elements\UpdateByPrimaryKeyWithoutBLOBsElementGenerator.java
+E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\mybatis3\service\elements\FindMethodGenerator.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\mybatis3\xmlmapper\elements\InsertSelectiveElementGenerator.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\ibatis2\Ibatis2FormattingUtilities.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\ibatis2\dao\DAOGenerator.java
@@ -114,6 +117,7 @@ E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generat
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\plugins\ToStringPlugin.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\ibatis2\dao\elements\UpdateByExampleWithoutBLOBsMethodGenerator.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\api\IntrospectedTable.java
+E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\mybatis3\javamapper\elements\SelectSelectiveMethodGenerator.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\mybatis3\xmlmapper\elements\SimpleSelectByPrimaryKeyElementGenerator.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\mybatis3\javamapper\elements\annotated\AnnotatedUpdateByPrimaryKeySelectiveMethodGenerator.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\mybatis3\service\ServiceImplGenerator.java
@@ -154,6 +158,7 @@ E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generat
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\mybatis3\javamapper\elements\UpdateByExampleWithBLOBsMethodGenerator.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\ibatis2\IntrospectedTableIbatis2Java5Impl.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\mybatis3\model\BaseRecordGenerator.java
+E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\mybatis3\xmlmapper\elements\SelectSelectiveElementGenerator.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\codegen\ibatis2\dao\elements\UpdateByExampleWithBLOBsMethodGenerator.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\config\xml\ParserErrorHandler.java
 E:\ideaProject\CRUDGenerator\CRUDGeneratorCore\src\main\java\org\mybatis\generator\api\GeneratedXmlFile.java
