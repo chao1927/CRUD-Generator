@@ -29,7 +29,6 @@ public class GetMethodImplGenerator extends AbstractServiceImplMethodGenerator {
         method.addParameter(new Parameter(parameterType, paramName));
         method.setReturnType(returnType);
         clazz.addImportedTypes(importedTypes);
-        method.addParameter(new Parameter(parameterType, paramName));
         FullyQualifiedJavaType mapperType = new FullyQualifiedJavaType(introspectedTable.getMyBatis3JavaMapperType());
         importedTypes.add(mapperType);
         /**

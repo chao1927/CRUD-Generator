@@ -8,25 +8,28 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class DeleteMethodGenerator extends AbstractServiceMethodGenerator {
+public class FindMethodGenerator extends AbstractServiceMethodGenerator{
     public void addInterfaceElements(Interface interfaze) {
         Set<FullyQualifiedJavaType> importedTypes = new TreeSet<FullyQualifiedJavaType>();
-        Method method=new Method("delete");
+        Method method = new Method("find");
         method.setVisibility(JavaVisibility.PUBLIC);
-        FullyQualifiedJavaType parameterType;
+        FullyQualifiedJavaType returnType;
         if (introspectedTable.getRules().generateRecordWithBLOBsClass()) {
-            parameterType = new FullyQualifiedJavaType(introspectedTable
+            returnType = new FullyQualifiedJavaType(introspectedTable
                     .getRecordWithBLOBsType());
+
         } else {
-            parameterType = new FullyQualifiedJavaType(introspectedTable
+            returnType = new FullyQualifiedJavaType(introspectedTable
                     .getBaseRecordType());
         }
-        importedTypes.add(parameterType);
+        importedTypes.add(returnType);
         List<IntrospectedColumn> keyColumns=introspectedTable.getPrimaryKeyColumns();
         for(IntrospectedColumn kc:keyColumns){
             importedTypes.add(kc.getFullyQualifiedJavaType());
             method.addParameter(new Parameter(kc.getFullyQualifiedJavaType(), kc.getJavaProperty()));
         }
+
+        method.setReturnType(returnType);
         interfaze.addMethod(method);
         interfaze.addImportedTypes(importedTypes);
     }

@@ -27,7 +27,7 @@ public class UpdateMethodImplGenerator extends AbstractServiceImplMethodGenerato
         /**
          *  dao.update..();
          */
-        method.addBodyLine(StringUtility.convertFieldName(mapperType.getShortName())+".updateByExample("+paramName+");");
+        method.addBodyLine(StringUtility.convertFieldName(mapperType.getShortName())+".updateByPrimaryKeySelective("+paramName+");");
         clazz.addMethod(method);
         clazz.addImportedTypes(importedTypes);
     }

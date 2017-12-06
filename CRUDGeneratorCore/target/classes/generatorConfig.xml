@@ -18,27 +18,27 @@
         <!-- <javaTypeResolver>
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver> -->
-        <javaControllerGenerator targetPackage="cn.xdf.wlyy.controller"
-                                 targetProject="E:\mytest">
+        <javaControllerGenerator targetPackage="org.arnold.tt.controller"
+                                 targetProject="E:\ideaProject\tt\src\main\java">
         </javaControllerGenerator>
 
-        <javaServiceGenerator targetPackage="cn.xdf.wlyy.service"
-                              targetProject="E:\mytest">
+        <javaServiceGenerator targetPackage="org.arnold.tt.service"
+                              targetProject="E:\ideaProject\tt\src\main\java">
         </javaServiceGenerator>
 
-        <javaModelGenerator targetPackage="cn.xdf.wlyy.domain"
-                            targetProject="E:\mytest">
+        <javaModelGenerator targetPackage="org.arnold.tt.model"
+                            targetProject="E:\ideaProject\tt\src\main\java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
 
-        <sqlMapGenerator targetPackage="cn.xdf.wlyy.mapper"
-                         targetProject="E:\mytest">
+        <sqlMapGenerator targetPackage="org.arnold.tt.mapper"
+                         targetProject="E:\ideaProject\tt\src\main\java">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
         <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="cn.xdf.wlyy.dao" targetProject="E:\mytest">
+                             targetPackage="org.arnold.tt.dao" targetProject="E:\ideaProject\tt\src\main\java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
@@ -46,8 +46,6 @@
         <table tableName="stud" domainObjectName="Stud"></table>
         -->
         <table tableName="t_order" domainObjectName="Order"
-               enableCountByExample="true" enableUpdateByExample="true"
-               enableDeleteByExample="true" enableSelectByExample="true"
                selectByExampleQueryId="false"></table>
     </context>
 </generatorConfiguration>  

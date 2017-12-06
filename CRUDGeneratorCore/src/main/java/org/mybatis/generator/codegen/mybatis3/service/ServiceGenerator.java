@@ -29,7 +29,7 @@ public class ServiceGenerator extends AbstractJavaGenerator{
         addAddMethodGenerator(interfaze);
         addUpdateMethodGenerator(interfaze);
         addDeleteMethodGenerator(interfaze);
-        addGetMethodGenerator(interfaze);
+        addFindMethodGenerator(interfaze);
         answer.add(interfaze);
         return answer;
     }
@@ -49,8 +49,8 @@ public class ServiceGenerator extends AbstractJavaGenerator{
         initializeAndExecuteGenerator(methodGenerator,interfaze);
     }
 
-    protected void addGetMethodGenerator(Interface interfaze){
-        AbstractServiceMethodGenerator methodGenerator=new GetMethodGenerator();
+    protected void addFindMethodGenerator(Interface interfaze){
+        AbstractServiceMethodGenerator methodGenerator=new FindMethodGenerator();
         initializeAndExecuteGenerator(methodGenerator,interfaze);
     }
 

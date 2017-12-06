@@ -28,7 +28,6 @@ public class GetMethodGenerator extends AbstractControllerMethodGenerator {
         method.addParameter(new Parameter(parameterType, paramName));
         method.setReturnType(returnType);
         clazz.addImportedTypes(importedTypes);
-        method.addParameter(new Parameter(parameterType, paramName));
         method.addAnnotation("@RequestMapping(\"/get\")");
         FullyQualifiedJavaType serviceType = new FullyQualifiedJavaType(introspectedTable.getServiceType());
         importedTypes.add(serviceType);

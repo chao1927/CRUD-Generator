@@ -28,11 +28,12 @@ public class ControllerGenerator extends AbstractJavaGenerator {
         importedTypes.add(autowireType);
         clazz.addField(autowireField);
         clazz.addAnnotation("@Controller");
+        importedTypes.add(new FullyQualifiedJavaType("org.springframework.stereotype.Controller"));
         clazz.addImportedTypes(importedTypes);
         addAddMethodGenerator(clazz);
         addDeleteMethodGenerator(clazz);
         addUpdateMethodGenerator(clazz);
-        addGetMethodGenerator(clazz);
+        addFindMethodGenerator(clazz);
         answer.add(clazz);
         return answer;
     }
@@ -52,8 +53,8 @@ public class ControllerGenerator extends AbstractJavaGenerator {
         initializeAndExecuteGenerator(methodGeneratorMethodGenerator,clazz);
     }
 
-    protected void addGetMethodGenerator(TopLevelClass clazz){
-        AbstractControllerMethodGenerator methodGeneratorMethodGenerator= new GetMethodGenerator();
+    protected void addFindMethodGenerator(TopLevelClass clazz){
+        AbstractControllerMethodGenerator methodGeneratorMethodGenerator= new FindMethodGenerator();
         initializeAndExecuteGenerator(methodGeneratorMethodGenerator,clazz);
     }
 

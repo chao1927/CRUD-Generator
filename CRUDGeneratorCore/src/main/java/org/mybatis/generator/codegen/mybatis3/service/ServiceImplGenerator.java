@@ -37,7 +37,7 @@ public class ServiceImplGenerator extends AbstractJavaGenerator {
         addAddImplMethodGenerator(clazz);
         addDeleteImplMethodGenerator(clazz);
         addUpdateImplMethodGenerator(clazz);
-        addGetImplMethodGenerator(clazz);
+        addFindImplMethodGenerator(clazz);
         return answer;
     }
 
@@ -56,8 +56,8 @@ public class ServiceImplGenerator extends AbstractJavaGenerator {
         initializeAndExecuteGenerator(methodGeneratorMethodGenerator,clazz);
     }
 
-    protected void addGetImplMethodGenerator(TopLevelClass clazz){
-        AbstractServiceImplMethodGenerator methodGeneratorMethodGenerator= new GetMethodImplGenerator();
+    protected void addFindImplMethodGenerator(TopLevelClass clazz){
+        AbstractServiceImplMethodGenerator methodGeneratorMethodGenerator= new FindMethodImplGenerator();
         initializeAndExecuteGenerator(methodGeneratorMethodGenerator,clazz);
     }
 
