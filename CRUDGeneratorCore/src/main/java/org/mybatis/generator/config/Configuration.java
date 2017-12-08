@@ -33,6 +33,7 @@ import static org.mybatis.generator.internal.util.messages.Messages.getString;
  */
 public class Configuration {
 
+
     private List<Context> contexts;
     private List<String> classPathEntries;
 
@@ -83,6 +84,8 @@ public class Configuration {
             throw new InvalidConfigurationException(errors);
         }
     }
+
+
 
     public List<Context> getContexts() {
         return contexts;

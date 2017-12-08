@@ -34,6 +34,10 @@ import static org.mybatis.generator.internal.util.messages.Messages.getString;
  * @author Jeff Butler
  */
 public class TableConfiguration extends PropertyHolder {
+    private String tablePrefix;
+
+    private String fieldPrefix;
+
     private boolean insertStatementEnabled;
 
     private boolean selectByPrimaryKeyStatementEnabled;

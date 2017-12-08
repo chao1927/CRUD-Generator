@@ -38,6 +38,10 @@ import static org.mybatis.generator.internal.util.messages.Messages.getString;
 public class Context extends PropertyHolder {
     private String id;
 
+    private String tablePrefix;
+
+    private String fieldPrefix;
+
     private JDBCConnectionConfiguration jdbcConnectionConfiguration;
 
     private SqlMapGeneratorConfiguration sqlMapGeneratorConfiguration;
@@ -203,6 +207,22 @@ public class Context extends PropertyHolder {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getTablePrefix() {
+        return tablePrefix;
+    }
+
+    public void setTablePrefix(String tablePrefix) {
+        this.tablePrefix = tablePrefix;
+    }
+
+    public String getFieldPrefix() {
+        return fieldPrefix;
+    }
+
+    public void setFieldPrefix(String fieldPrefix) {
+        this.fieldPrefix = fieldPrefix;
     }
 
     public void setJavaClientGeneratorConfiguration(

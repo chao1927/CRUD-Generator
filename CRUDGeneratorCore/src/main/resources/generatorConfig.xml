@@ -6,7 +6,12 @@
 <generatorConfiguration>
     <!-- 数据库驱动 -->
     <classPathEntry location="E:\jar\mysql-connector-java-5.1.39-bin.jar"/>
+
     <context id="DB2Tables" targetRuntime="MyBatis3">
+        <!-- 表前缀 -->
+        <tablePrefix text="t_"/>
+        <!-- 字段前缀-->
+        <fieldPrefix text="f_"/>
         <commentGenerator>
             <property name="suppressDate" value="true"/>
             <property name="suppressAllComments" value="true"/>

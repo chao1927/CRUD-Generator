@@ -117,6 +117,18 @@ public class MyBatisGeneratorConfigurationParser {
         }
     }
 
+    private void parseTablePrefix(Context context, Node node){
+        Properties attributes = parseAttributes(node);
+        String text=attributes.getProperty("text");
+        context.setTablePrefix(text);
+    }
+
+    private void parseFieldPrefix(Context context, Node node){
+        Properties attributes = parseAttributes(node);
+        String text=attributes.getProperty("text");
+        context.setFieldPrefix(text);
+    }
+
     private void parseContext(Configuration configuration, Node node) {
 
         Properties attributes = parseAttributes(node);
@@ -168,9 +180,12 @@ public class MyBatisGeneratorConfigurationParser {
                 parseJavaServiceGenerator(context, childNode);
             } else if("javaControllerGenerator".equals(childNode.getNodeName())){
                 parseJavaControllerGenerator(context, childNode);
-            }
-            else if ("table".equals(childNode.getNodeName())) { //$NON-NLS-1$
+            } else if ("table".equals(childNode.getNodeName())) { //$NON-NLS-1$
                 parseTable(context, childNode);
+            }else if("tablePrefix".equals(childNode.getNodeName())){
+                parseTablePrefix(context,childNode);
+            } else if("fieldPrefix".equals(childNode.getNodeName())){
+                parseFieldPrefix(context,childNode);
             }
         }
     }
@@ -201,6 +216,20 @@ public class MyBatisGeneratorConfigurationParser {
         }
     }
 
+    private String  domainObjectName(Context context,String tableName){
+        String tablePrefix=context.getTablePrefix();
+        if(tableName.startsWith(tablePrefix)){
+            tableName=tableName.substring(tablePrefix.length());
+        }
+        String objName=tableName.substring(0,1).toUpperCase()+tableName.substring(1,tableName.length());
+        int i;
+        while ((i=objName.indexOf("_"))>0){
+            if(i>=objName.length()-1)
+                break;
+            objName=objName.substring(0,i)+String.valueOf(objName.charAt(i+1)).toUpperCase()+objName.substring(i+2,objName.length());
+        }
+        return objName;
+    }
     private void parseTable(Context context, Node node) {
         TableConfiguration tc = new TableConfiguration(context);
         context.addTableConfiguration(tc);
@@ -209,7 +238,8 @@ public class MyBatisGeneratorConfigurationParser {
         String catalog = attributes.getProperty("catalog"); //$NON-NLS-1$
         String schema = attributes.getProperty("schema"); //$NON-NLS-1$
         String tableName = attributes.getProperty("tableName"); //$NON-NLS-1$
-        String domainObjectName = attributes.getProperty("domainObjectName"); //$NON-NLS-1$
+        String domainObjectName =domainObjectName(context,tableName);
+                //String domainObjectName = attributes.getProperty("domainObjectName"); //$NON-NLS-1$
         String alias = attributes.getProperty("alias"); //$NON-NLS-1$
         String enableInsert = attributes.getProperty("enableInsert"); //$NON-NLS-1$
         String enableSelectByPrimaryKey = attributes
