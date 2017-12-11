@@ -233,7 +233,13 @@ public class MyBatisGeneratorConfigurationParser {
     private void parseTable(Context context, Node node) {
         TableConfiguration tc = new TableConfiguration(context);
         context.addTableConfiguration(tc);
-
+        String fieldPrefix=context.getFieldPrefix();
+        if(fieldPrefix!=null){
+            ColumnRenamingRule rule=new ColumnRenamingRule();
+            rule.setSearchString(fieldPrefix);
+            rule.setReplaceString("");
+            tc.setColumnRenamingRule(rule);
+        }
         Properties attributes = parseAttributes(node);
         String catalog = attributes.getProperty("catalog"); //$NON-NLS-1$
         String schema = attributes.getProperty("schema"); //$NON-NLS-1$

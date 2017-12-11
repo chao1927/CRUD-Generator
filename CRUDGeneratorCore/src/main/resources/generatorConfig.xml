@@ -50,7 +50,7 @@
         <!--
         <table tableName="stud" domainObjectName="Stud"></table>
         -->
-        <table tableName="t_order" domainObjectName="Order"
+        <table tableName="t_order"
                selectByExampleQueryId="false"
                enableSelectByExample="false"
                enableUpdateByExample="false"
