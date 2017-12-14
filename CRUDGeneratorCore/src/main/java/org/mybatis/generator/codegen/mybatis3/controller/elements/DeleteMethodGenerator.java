@@ -20,6 +20,7 @@ public class DeleteMethodGenerator extends AbstractControllerMethodGenerator {
             method.addParameter(new Parameter(kc.getFullyQualifiedJavaType(), kc.getJavaProperty()));
             paramStr+=kc.getJavaProperty()+",";
         }
+
         paramStr=paramStr.substring(0,paramStr.length()-1);
         FullyQualifiedJavaType serviceType=new FullyQualifiedJavaType(introspectedTable.getServiceType());
         importedTypes.add(serviceType);

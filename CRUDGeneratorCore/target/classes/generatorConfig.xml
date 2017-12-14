@@ -17,44 +17,46 @@
             <property name="suppressAllComments" value="true"/>
         </commentGenerator>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://123.206.183.199/baina" userId="arnold"
-                        password="Arnold@666">
+                        connectionURL="jdbc:mysql://192.168.1.92:3306/manaowan" userId="root"
+                        password="root">
         </jdbcConnection>
         <!-- <javaTypeResolver>
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver> -->
-        <javaControllerGenerator targetPackage="org.arnold.tt.controller"
-                                 targetProject="E:\ideaProject\tt\src\main\java">
+        <javaControllerGenerator targetPackage="com.mnw.freebapi.controller"
+                                 targetProject="E:\ideaProject\freebapi\src\main\java">
         </javaControllerGenerator>
 
-        <javaServiceGenerator targetPackage="org.arnold.tt.service"
-                              targetProject="E:\ideaProject\tt\src\main\java">
+        <javaServiceGenerator targetPackage="com.mnw.freebapi.service"
+                              targetProject="E:\ideaProject\freebapi\src\main\java">
         </javaServiceGenerator>
 
-        <javaModelGenerator targetPackage="org.arnold.tt.model"
-                            targetProject="E:\ideaProject\tt\src\main\java">
+        <javaModelGenerator targetPackage="com.mnw.freebapi.model"
+                            targetProject="E:\ideaProject\freebapi\src\main\java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-
-        <sqlMapGenerator targetPackage="org.arnold.tt.mapper"
-                         targetProject="E:\ideaProject\tt\src\main\java">
-            <property name="enableSubPackages" value="true"/>
-        </sqlMapGenerator>
         <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="org.arnold.tt.dao" targetProject="E:\ideaProject\tt\src\main\java">
+                             targetPackage="com.mnw.freebapi.dao"
+                             targetProject="E:\ideaProject\freebapi\src\main\java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
+
+        <sqlMapGenerator
+                targetPackage="mapper"
+                targetProject="E:\ideaProject\freebapi\src\main\resources\mapper">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
 
         <!--
         <table tableName="stud" domainObjectName="Stud"></table>
         -->
-        <table tableName="t_order"
+        <table tableName="t_domestic_area"
                selectByExampleQueryId="false"
-               enableSelectByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
+               enableSelectByExample="true"
+               enableUpdateByExample="true"
+               enableDeleteByExample="true"
         ></table>
     </context>
 </generatorConfiguration>  

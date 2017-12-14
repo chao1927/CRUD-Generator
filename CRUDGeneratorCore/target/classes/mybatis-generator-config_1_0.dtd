@@ -52,7 +52,7 @@
           tables.
         -->
         <!ELEMENT context (property*, plugin*, tablePrefix?,fieldPrefix?,commentGenerator?, jdbcConnection, javaTypeResolver?,javaControllerGenerator,
-                javaServiceGenerator, javaModelGenerator, sqlMapGenerator?, javaClientGenerator?, table+)>
+                javaServiceGenerator, javaModelGenerator,javaClientGenerator?, sqlMapGenerator?, table+)>
         <!ATTLIST context id ID #REQUIRED
                 defaultModelType CDATA #IMPLIED
                 targetRuntime CDATA #IMPLIED
